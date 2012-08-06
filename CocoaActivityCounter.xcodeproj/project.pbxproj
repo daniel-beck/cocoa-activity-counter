@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		468C32AA15C5480E00C51216 /* player_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 468C32A815C5480E00C51216 /* player_pause.png */; };
+		468C32AB15C5480E00C51216 /* player_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 468C32A915C5480E00C51216 /* player_play.png */; };
+		468C32AF15C561B500C51216 /* editclear.png in Resources */ = {isa = PBXBuildFile; fileRef = 468C32AE15C561B500C51216 /* editclear.png */; };
 		46B3A6F815C53E8900F49728 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B3A6F715C53E8900F49728 /* Cocoa.framework */; };
 		46B3A70215C53E8900F49728 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B3A70015C53E8900F49728 /* InfoPlist.strings */; };
 		46B3A70415C53E8900F49728 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B3A70315C53E8900F49728 /* main.m */; };
 		46B3A70815C53E8900F49728 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 46B3A70615C53E8900F49728 /* Credits.rtf */; };
-		46B3A70B15C53E8900F49728 /* BWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B3A70A15C53E8900F49728 /* BWAppDelegate.m */; };
+		46B3A70B15C53E8900F49728 /* DBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B3A70A15C53E8900F49728 /* DBAppDelegate.m */; };
 		46B3A70E15C53E8900F49728 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46B3A70C15C53E8900F49728 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		468C32A815C5480E00C51216 /* player_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_pause.png; sourceTree = "<group>"; };
+		468C32A915C5480E00C51216 /* player_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_play.png; sourceTree = "<group>"; };
+		468C32AE15C561B500C51216 /* editclear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editclear.png; sourceTree = "<group>"; };
 		46B3A6F315C53E8900F49728 /* CocoaActivityCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaActivityCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B3A6F715C53E8900F49728 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		46B3A6FA15C53E8900F49728 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -26,8 +32,8 @@
 		46B3A70315C53E8900F49728 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46B3A70515C53E8900F49728 /* CocoaActivityCounter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaActivityCounter-Prefix.pch"; sourceTree = "<group>"; };
 		46B3A70715C53E8900F49728 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		46B3A70915C53E8900F49728 /* BWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWAppDelegate.h; sourceTree = "<group>"; };
-		46B3A70A15C53E8900F49728 /* BWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWAppDelegate.m; sourceTree = "<group>"; };
+		46B3A70915C53E8900F49728 /* DBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBAppDelegate.h; sourceTree = "<group>"; };
+		46B3A70A15C53E8900F49728 /* DBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBAppDelegate.m; sourceTree = "<group>"; };
 		46B3A70D15C53E8900F49728 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,12 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		468C32AD15C5481200C51216 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				468C32AE15C561B500C51216 /* editclear.png */,
+				468C32A815C5480E00C51216 /* player_pause.png */,
+				468C32A915C5480E00C51216 /* player_play.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		46B3A6E815C53E8800F49728 = {
 			isa = PBXGroup;
 			children = (
 				46B3A6FD15C53E8900F49728 /* CocoaActivityCounter */,
 				46B3A6F615C53E8900F49728 /* Frameworks */,
 				46B3A6F415C53E8900F49728 /* Products */,
+				468C32AD15C5481200C51216 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,8 +99,8 @@
 		46B3A6FD15C53E8900F49728 /* CocoaActivityCounter */ = {
 			isa = PBXGroup;
 			children = (
-				46B3A70915C53E8900F49728 /* BWAppDelegate.h */,
-				46B3A70A15C53E8900F49728 /* BWAppDelegate.m */,
+				46B3A70915C53E8900F49728 /* DBAppDelegate.h */,
+				46B3A70A15C53E8900F49728 /* DBAppDelegate.m */,
 				46B3A70C15C53E8900F49728 /* MainMenu.xib */,
 				46B3A6FE15C53E8900F49728 /* Supporting Files */,
 			);
@@ -157,6 +174,9 @@
 				46B3A70215C53E8900F49728 /* InfoPlist.strings in Resources */,
 				46B3A70815C53E8900F49728 /* Credits.rtf in Resources */,
 				46B3A70E15C53E8900F49728 /* MainMenu.xib in Resources */,
+				468C32AA15C5480E00C51216 /* player_pause.png in Resources */,
+				468C32AB15C5480E00C51216 /* player_play.png in Resources */,
+				468C32AF15C561B500C51216 /* editclear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B3A70415C53E8900F49728 /* main.m in Sources */,
-				46B3A70B15C53E8900F49728 /* BWAppDelegate.m in Sources */,
+				46B3A70B15C53E8900F49728 /* DBAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +246,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Activity Counter";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -247,6 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "Activity Counter";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -294,6 +316,7 @@
 				46B3A71315C53E8900F49728 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
