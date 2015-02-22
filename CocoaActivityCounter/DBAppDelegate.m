@@ -37,7 +37,7 @@
     return YES;
 }
 
--(void)logMessageToLogView:(NSString*)message {
+- (void)logMessageToLogView:(NSString*)message {
     [logView setString: [[logView string] stringByAppendingFormat:@"%@: %@\n", [self.logDateFormatter stringFromDate:[NSDate date]],  message]];
 }
 
@@ -56,6 +56,15 @@
     if (self.loggingEnabled) {
         return;
     }
+	
+	
+	if (checkAccessibility()) {
+		[self logMessageToLogView:@"Accessibility Enabled"];
+	}
+	else {
+		[self logMessageToLogView:@"Accessibility Disabled"];
+	}
+	
     self.loggingEnabled = true;
     monitorLeftMouseDown = [NSEvent addGlobalMonitorForEventsMatchingMask:NSLeftMouseDownMask handler:^(NSEvent *evt) {
         [self logMessageToLogView:[NSString stringWithFormat:@"Left mouse down!"]];
@@ -89,6 +98,13 @@
         return !self.loggingEnabled;
     }
     return YES;
+}
+
+
+BOOL checkAccessibility()
+{
+	NSDictionary* opts = @{(__bridge id)kAXTrustedCheckOptionPrompt: @YES};
+	return AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)opts);
 }
 
 @end
